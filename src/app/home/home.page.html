@@ -1,20 +1,51 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="titulo">
+      By Luis Miguel Mesa
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<div class="contenedor">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="titulo_cal">Lassio</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="btn display">{{display}}</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="btn" (click)="clear()">A/C</ion-col>
+      <ion-col class="btn" (click)="back()"><span class="material-symbols-outlined">
+        arrow_back
+        </span></ion-col>
+      <ion-col class="btn" (click)="operation('%')">%</ion-col>
+      <ion-col class="btn" (click)="operation('/')">/</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="btn" (click)="numbers(7)">7</ion-col>
+      <ion-col class="btn" (click)="numbers(8)">8</ion-col>
+      <ion-col class="btn" (click)="numbers(9)">9</ion-col>
+      <ion-col class="btn" (click)="operation('x')">X</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="btn" (click)="numbers(4)">4</ion-col>
+      <ion-col class="btn" (click)="numbers(5)">5</ion-col>
+      <ion-col class="btn" (click)="numbers(6)">6</ion-col>
+      <ion-col class="btn" (click)="operation('+')">+</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="btn" (click)="numbers(1)">1</ion-col>
+      <ion-col class="btn" (click)="numbers(2)">2</ion-col>
+      <ion-col class="btn" (click)="numbers(3)">3</ion-col>
+      <ion-col class="btn" (click)="operation('-')">-</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="btn" size="6" (click)="numbers(0)">0</ion-col>
+      <ion-col class="btn" (click)="dot('.')">.</ion-col>
+      <ion-col class="btn" (click)="equals()">=</ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>
